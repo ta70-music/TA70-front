@@ -1,14 +1,10 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
-if (process.env.CHROME_BIN == null) {
-  process.env.CHROME_BIN = require('puppeteer').executablePath();
-}
-
-module.exports = function(config) {
-  let configuration = {
+module.exports = function (config) {
+  config.set({
     basePath: '',
-    frameworks: ['jasmine', '@angular/cli'],
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
@@ -17,42 +13,26 @@ module.exports = function(config) {
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
-      clearContext: false, // leave Jasmine Spec Runner output visible in browser
-      captureConsole: Boolean(process.env.KARMA_ENABLE_CONSOLE)
-    },
-    junitReporter: {
-      outputDir: 'reports/junit/',
-      outputFile: 'TESTS-xunit.xml',
-      useBrowserName: false,
-      suite: '' // Will become the package name attribute in xml testsuite element
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
+      dir: require('path').join(__dirname, './coverage/appTA70'),
       reports: ['html', 'lcovonly', 'text-summary'],
-      dir: './reports/coverage',
       fixWebpackSourcePaths: true
     },
-    angularCli: {
-      environment: 'dev'
-    },
-    reporters: ['progress', 'junit'],
+    reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
-    // Level of logging, can be: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['ChromeHeadless'],
+    browsers: ['ChromeHeadless', 'ChromeHeadlessNoSandbox'],
     customLaunchers: {
-      Chrome_travis_ci: {
-        base: 'Chrome',
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
     },
-    singleRun: false
-  };
-
-  if(process.env.TRAVIS){
-    configuration.browsers = ['Chrome_travis_ci'];
-  }
-
-  config.set(configuration);
+    singleRun: false,
+    restartOnFileChange: true
+  });
 };
