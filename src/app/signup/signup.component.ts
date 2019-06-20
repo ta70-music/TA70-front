@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import UserForm from "../../Entities/UserForm";
+import UserForm from "../../Entities/UserFormSignup";
 import {passwordConfirmValidator} from "../../PasswordConfirmValidator";
 
 @Component({

@@ -1,7 +1,7 @@
 import {AbstractControl, FormGroup, ValidatorFn} from "@angular/forms";
-import UserForm from "./Entities/UserForm";
+import UserFormSignup from "./Entities/UserFormSignup";
 
-export function passwordConfirmValidator(user: UserForm): ValidatorFn {
+export function passwordConfirmValidator(user: UserFormSignup): ValidatorFn {
   return (control: AbstractControl): {[key: string]: any} | null => {
     console.log(user)
     console.log(control)
