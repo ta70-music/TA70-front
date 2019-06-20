@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TopBarService } from '../top-bar/top-bar.service';
-import { HomeCarouselService } from '../home-carousel/home-carousel.service';
-
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import UserFormSignin from "../../Entities/UserFormSignin";
 
 
 @Component({
@@ -10,14 +9,14 @@ import { HomeCarouselService } from '../home-carousel/home-carousel.service';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-  public user: UserForm;
+  public user: UserFormSignin;
   public form: FormGroup;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.user = new UserForm();
+    this.user = new UserFormSignin();
     this.form = new FormGroup({
       'name': new FormControl(this.user.name, [
         Validators.required,
@@ -29,8 +28,6 @@ export class SigninComponent implements OnInit {
       ]),
 
     });
-    this.nav.show();
-    this.div.show();
   }
   onSubmit() {
     console.log(this.user)
