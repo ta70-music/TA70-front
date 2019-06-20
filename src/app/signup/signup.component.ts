@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TopBarService } from '../top-bar/top-bar.service';
-import { HomeCarouselService } from '../home-carousel/home-carousel.service';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import UserForm from "../../Entities/UserForm";
 import {passwordConfirmValidator} from "../../PasswordConfirmValidator";
@@ -13,7 +11,7 @@ import {passwordConfirmValidator} from "../../PasswordConfirmValidator";
 export class SignupComponent implements OnInit {
   public user: UserForm;
   public form: FormGroup;
-  constructor(public nav: TopBarService, public div:HomeCarouselService ) {
+  constructor() {
   }
 
   ngOnInit() {
@@ -37,8 +35,6 @@ export class SignupComponent implements OnInit {
         passwordConfirmValidator(this.user)
       ]),
     });
-    this.nav.show();
-    this.div.show();
   }
 
   onSubmit() {

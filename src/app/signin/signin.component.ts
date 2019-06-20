@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { TopBarService } from '../top-bar/top-bar.service';
-import { HomeCarouselService } from '../home-carousel/home-carousel.service';
-
+import {Component, OnInit} from '@angular/core';
 
 
 @Component({
@@ -11,11 +8,10 @@ import { HomeCarouselService } from '../home-carousel/home-carousel.service';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(public nav: TopBarService, public div:HomeCarouselService ) { }
+  constructor() {
+  }
 
   ngOnInit() {
-    this.nav.show();
-    this.div.show();
   }
 
 }

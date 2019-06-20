@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TopBarService } from './top-bar.service';
 
 
 @Component({
@@ -8,10 +7,11 @@ import { TopBarService } from './top-bar.service';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent implements OnInit {
+  constructor(){
 
-  constructor( public nav: TopBarService ) {}
+  }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
