@@ -1,0 +1,21 @@
+<nav *ngIf="!nav.visible" class="navbar navbar-light bg-light bg-dark justify-content-between Header-background  w-100">
+    <a class="navbar-brand" >
+      <img alt="" src="../../assets/img/wavein_logo_n_white.png" class="wavein_logo_n_white">
+    </a>
+
+
+  <form class="form-inline">
+    <input type="search" class="form-control mr-4" id="exampleFormControlInput1" placeholder="Rechercher" aria-label="Search">
+
+    <div class="text-white mr-4">|</div>
+
+    <div>
+      <a class=" text-white my-2 my-sm-0 mr-3 d-inline" href="Signin" data-toggle="modal" routerLink="/signin">
+        Signin
+      </a>
+      <a class=" btn my-2 my-sm-0 RectangleBordure d-inline" href="Signup" data-toggle="modal" routerLink="/signup">
+        Signup
+      </a>
+    </div>
+  </form>
+</nav>

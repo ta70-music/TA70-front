@@ -1,0 +1,18 @@
+.wavein_logo_n_black {
+  width: 200px;
+  height: 80px;
+}
+
+.RectangleBordureLogin {
+  width: 100%;
+  border-radius: 24px;
+  background-color: #ffffff;
+
+  color: darkgray;
+}
+.submit{
+  width: 60%;
+  border-radius: 24px;
+  background-color: #52b47b;
+
+}

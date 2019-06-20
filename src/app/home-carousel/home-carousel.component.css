@@ -1,0 +1,12 @@
+.RectangleBordureCarousel {
+  width: 100%;
+  border-radius: 26.5px;
+  border-color: #52b47b;
+  color: white;
+  background-color: #16161a;
+}
+.carousel-caption {
+  top: 10%;
+  margin: 100px;
+  bottom: auto;
+}

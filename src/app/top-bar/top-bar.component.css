@@ -1,0 +1,16 @@
+.Header-background {
+  width: 1436px;
+  height: 92px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.5);
+  background-color: #16161a;
+}
+.RectangleBordure {
+  width: 100%;
+  border-radius: 26.5px;
+  background-color: #52b47b;
+}
+
+.wavein_logo_n_white {
+  width: 156px;
+  height: 68px;
+}
