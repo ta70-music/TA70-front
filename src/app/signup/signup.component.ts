@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TopBarService } from '../top-bar/top-bar.service';
 import { HomeCarouselService } from '../home-carousel/home-carousel.service';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import UserForm from "../../Entities/UserForm";
+import UserForm from "../../Entities/UserFormSignup";
 import {passwordConfirmValidator} from "../../PasswordConfirmValidator";
 
 @Component({
