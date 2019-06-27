@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import UserFormSignin from "../../Entities/UserFormSignin";
+import {usersFixtures} from "../../Entities/Fixtures";
+import {User} from "../../Entities/User";
+import userSession from "../../tools/userSession";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -12,7 +16,7 @@ export class SigninComponent implements OnInit {
   public user: UserFormSignin;
   public form: FormGroup;
 
-  constructor() {
+  constructor(private route: Router) {
   }
 
   ngOnInit() {
@@ -20,7 +24,7 @@ export class SigninComponent implements OnInit {
     this.form = new FormGroup({
       'name': new FormControl(this.user.name, [
         Validators.required,
-        Validators.minLength(4),
+        Validators.minLength(3),
       ]),
       'password': new FormControl(this.user.name, [
         Validators.required,
@@ -29,7 +33,17 @@ export class SigninComponent implements OnInit {
 
     });
   }
+
   onSubmit() {
-    console.log(this.user)
+    let usersfind = usersFixtures.filter((usr: User) => {
+      return usr.name === this.user.name;
+    })
+    if (usersfind.length === 1) {
+      const userfind = usersfind[0];
+      if (userfind.password === this.user.password) {
+        userSession.get().setUser(userfind);
+        this.route.navigate(['/'])
+      }
+    }
   }
 }

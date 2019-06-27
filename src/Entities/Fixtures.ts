@@ -10,4 +10,9 @@ export const musicsFixtures = [
   {name: 'Music 2', id: 2, file: 'toto.mp3', author: usersFixtures[0]},
   {name: 'Music 3', id: 3, file: 'toto.mp3', author: usersFixtures[0]},
   {name: 'Music 4', id: 4, file: 'toto.mp3', author: usersFixtures[0]},
+  {name: 'Music 4', id: 4, file: 'toto.mp3', author: usersFixtures[0]},
+  {name: 'Music 4', id: 4, file: 'toto.mp3', author: usersFixtures[0]},
+  {name: 'Music 4', id: 4, file: 'toto.mp3', author: usersFixtures[0]},
+  {name: 'Music 4', id: 4, file: 'toto.mp3', author: usersFixtures[0]},
+  {name: 'Music 4', id: 4, file: 'toto.mp3', author: usersFixtures[0]},
 ]

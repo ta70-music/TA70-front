@@ -16,6 +16,9 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {UserSuggestionComponent} from "./user-suggestion/user-suggestion.component";
+import { MainPageComponent } from './main-page/main-page.component';
+import { MusicListComponent } from './music-list/music-list.component';
 import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
@@ -27,6 +30,9 @@ import { ProfileComponent } from './profile/profile.component';
     SignupComponent,
     HomeComponent,
     ProfileComponent,
+    UserSuggestionComponent,
+    MainPageComponent,
+    MusicListComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import UserSession from "../../tools/userSession";
+import {User} from "../../Entities/User";
 
 
 @Component({
@@ -7,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent implements OnInit {
+  user: User;
+  session: UserSession;
+  connected: boolean;
   constructor(){
-
+    this.session = UserSession.get();
+    this.user = this.session.getUser();
+    this.connected = this.session.connected;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

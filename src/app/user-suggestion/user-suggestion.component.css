@@ -1,0 +1,24 @@
+.profilpic {
+  width: 150px;
+  height: 150px;
+  background: #52b47b;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.user-suggestion-container {
+  margin: 0;
+  padding-top: 20px;
+}
+.profilpic .information {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  background: rgba(0,0,0,0.4);
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+  font-size: 18px;
+  font-weight: bold;
+}
+.profilpic:hover .information {
+  transform: translateY(50%);
+}
