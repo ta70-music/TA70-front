@@ -20,6 +20,7 @@ import {UserSuggestionComponent} from "./user-suggestion/user-suggestion.compone
 import { MainPageComponent } from './main-page/main-page.component';
 import { MusicListComponent } from './music-list/music-list.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ProfileComponent } from './profile/profile.component';
     UserSuggestionComponent,
     MainPageComponent,
     MusicListComponent,
+    PlayerComponent,
   ],
   imports: [
     BrowserModule,
