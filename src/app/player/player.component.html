@@ -3,11 +3,11 @@
 <div  class="navbar navbar-light bg-dark fixed-bottom">
 
   <div class="col-2 border-right border-secondary text-white">
-    <p>Description de l'audio</p>
+    <p *ngIf="actualMusic">{{actualMusic.name}} - {{actualMusic.author.name}}</p>
   </div>
   <div class="col-10">
-    <audio preload="auto" (play)="onPlay()" (pause)="onPause()" controls class="fas fa-audio-description">
-      <source src="../../assets/musics/1.mp3">
+    <audio id="audiobar" preload="auto" (play)="onPlay()" (pause)="onPause()" controls class="fas fa-audio-description">
+      <source *ngIf="actualMusic" [src]="actualMusic.file">
     </audio>
   </div>
 
