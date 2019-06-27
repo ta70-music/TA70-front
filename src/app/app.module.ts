@@ -16,6 +16,7 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     SigninComponent,
     SignupComponent,
     HomeComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
