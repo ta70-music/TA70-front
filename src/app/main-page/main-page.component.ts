@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {musicsFixtures} from "../../Entities/Fixtures";
+import MusicManager from "../../tools/MusicManager";
+import Music from "../../Entities/Music";
 
 @Component({
   selector: 'app-main-page',
@@ -6,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
-  constructor() { }
+  musics: Music[];
+  constructor() {
+    this.musics = musicsFixtures;
+  }
 
   ngOnInit() {
   }

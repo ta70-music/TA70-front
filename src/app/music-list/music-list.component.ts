@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import Music from "../../Entities/Music";
 import {musicsFixtures} from "../../Entities/Fixtures";
 import MusicManager from "../../tools/MusicManager";
@@ -9,10 +9,9 @@ import MusicManager from "../../tools/MusicManager";
   styleUrls: ['./music-list.component.css']
 })
 export class MusicListComponent implements OnInit {
-  musics: Music[];
+  @Input() musics: Music[];
   manager: MusicManager;
   constructor() {
-    this.musics = musicsFixtures;
     this.manager = MusicManager.get();
   }
 
