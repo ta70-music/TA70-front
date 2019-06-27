@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, ParamMap} from '@angular/router';
+import {usersFixtures} from '../../Entities/Fixtures';
+import {User} from '../../Entities/User';
+
+enum Mode {
+  CONVEYER,
+  MATERIAL,
+  ENGINE
+}
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +16,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  private user: User;
+  public mode: Mode;
 
-  ngOnInit() {
+  constructor(private route: ActivatedRoute) {
+    this.mode = Mode.ENGINE;
   }
 
+  ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.user = usersFixtures[id];
+  }
+
+  onChangeMode(m: Mode) {
+    this.mode = m;
+  }
 }

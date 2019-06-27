@@ -1,13 +1,11 @@
-
-
 <div class="content container">
 
   <!-- Profile Section -->
   <div class="profile-section container-fluid">
     <div class="container">
-      <img src="https://raw.githubusercontent.com/wrideveloper/simple-profile-page/master/assets/image/profile.png" class="profile-photo">
-      <p class="profile-name">John Doe</p>
-      <p class="profile-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio et ex hic, ipsam itaque laborum rem. Blanditiis deserunt id, natus numquam officiis praesentium tenetur. Animi est facilis non repellendus ullam?</p>
+      <img src="{{ user.img}} " class="profile-photo">
+      <p class="profile-name"> {{ user.name }}</p>
+      <p class="profile-detail">{{ user.description }}</p>
       <button class="button profile-follow btn">Follow</button>
     </div>
   </div>
@@ -18,25 +16,7 @@
 
       <div class="card">
         <div class="container col-md-auto">
-          <div class="card-title">Card Title</div>
-          <div class="card-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi consequatur corporis culpa dignissimos, eaque nihil provident quam quas ratione sed sint, tempora. Accusamus architecto dignissimos eveniet explicabo unde, vero?
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="container col-md-auto">
-          <div class="card-title">Card Title</div>
-          <div class="card-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi consequatur corporis culpa dignissimos, eaque nihil provident quam quas ratione sed sint, tempora. Accusamus architecto dignissimos eveniet explicabo unde, vero?
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="container">
-          <div class="card-title">Card Title</div>
+          <div class="card-title">Musique</div>
           <div class="card-body">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi consequatur corporis culpa dignissimos, eaque nihil provident quam quas ratione sed sint, tempora. Accusamus architecto dignissimos eveniet explicabo unde, vero?
           </div>
