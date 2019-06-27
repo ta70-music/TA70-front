@@ -31,17 +31,11 @@
 .btn-play-pause {
   display: none;
   position: absolute;
-  text-align: center;
-  top: 0;
+  text-align: justify;
+  font-size: 600%;
   right: 50%;
-  margin-top: 64px;
-  font-size: 36px;
+  top: 10%;
   vertical-align: middle;
-  width: 75px;
-  height: 75px;
-  background-color: #16161a;
-  color: #52b47b;
-  border-radius: 100%;
   transform: translateX(50%);
   cursor: pointer;
 }
