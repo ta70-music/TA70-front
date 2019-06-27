@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {musicsFixtures} from "../../Entities/Fixtures";
-import MusicManager from "../../tools/MusicManager";
 import Music from "../../Entities/Music";
+import Category from "../../Entities/Category";
 
 @Component({
   selector: 'app-main-page',
@@ -10,6 +10,7 @@ import Music from "../../Entities/Music";
 })
 export class MainPageComponent implements OnInit {
   musics: Music[];
+
   constructor() {
     this.musics = musicsFixtures;
   }
@@ -17,4 +18,17 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  onModeChange() {
+    console.log('mode change')
+  }
+
+  onCategoryChange(c: Category) {
+    if (c===null){
+      this.musics = musicsFixtures
+    } else {
+      this.musics = musicsFixtures.filter(((m: Music) => {
+        return m.category===c;
+      }))
+    }
+  }
 }

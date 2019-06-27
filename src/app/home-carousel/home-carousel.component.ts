@@ -23,10 +23,10 @@ export class HomeCarouselComponent implements OnInit, OnDestroy {
         .setbutton('signin')
         .setsubtitle('Join wavein today.')
         .setbuttonlink('/signin'),
-      new HomeTopic().setmaintitle('You bring the passion. <br> We bring the musics.')
-        .setbutton('signin')
-        .setsubtitle('Join wavein today.')
-        .setbuttonlink('/signin'),
+      new HomeTopic().setmaintitle('Discover authors and musics')
+        .setbutton('discover')
+        .setsubtitle('')
+        .setbuttonlink('/main'),
       new HomeTopic().setmaintitle('You bring the passion. <br> We bring the music.')
         .setbutton('signin')
         .setsubtitle('Join wavein today.')

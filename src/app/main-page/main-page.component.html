@@ -1,8 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3 navbar">
-
-    </div>
+    <app-left-bar class="col-3 navbar" (mode)="onModeChange()" (category)="onCategoryChange($event)"></app-left-bar>
     <div class="col-9 music-list">
       <app-music-list [musics]="musics"></app-music-list>
     </div>

@@ -1,6 +1,7 @@
 .navbar{
   height: 100vh;
-  background-color: #16161a;
+  margin: 0;
+  padding: 0;
 }
 .music-list{
   margin-top: 50px;
