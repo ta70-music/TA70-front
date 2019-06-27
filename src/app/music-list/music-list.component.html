@@ -1,12 +1,12 @@
 <div class="row">
-  <div class="col-2 music-container" *ngFor="let m of musics">
+  <div class="col-md-auto music-container" *ngFor="let m of musics">
     <div class="music mx-auto">
       <div class="information">
         {{m.name}}
       </div>
       <div (click)="onPlayPause(m)" class="btn-play-pause" [ngClass]="{'active-music': manager.musicRun===m}">
-        <i *ngIf="manager.musicRun!==m  || !manager.isPlay" class="fas fa-play"></i>
-        <i *ngIf="manager.musicRun===m && manager.isPlay"  class="fas fa-pause"></i>
+        <i *ngIf="manager.musicRun!==m  || !manager.isPlay" class="far fa-play-circle"></i>
+        <i *ngIf="manager.musicRun===m && manager.isPlay"  class="far fa-pause-circle"></i>
       </div>
     </div>
   </div>

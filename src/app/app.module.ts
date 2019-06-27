@@ -21,6 +21,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { MusicListComponent } from './music-list/music-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LeftBarComponent } from './left-bar/left-bar.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LeftBarComponent } from './left-bar/left-bar.component';
     MainPageComponent,
     MusicListComponent,
     LeftBarComponent,
+    PlayerComponent,
   ],
   imports: [
     BrowserModule,
