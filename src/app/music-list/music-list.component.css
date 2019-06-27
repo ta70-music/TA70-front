@@ -25,6 +25,9 @@
 .music:hover .btn-play-pause {
   display: block;
 }
+.active-music {
+  display: block !important;
+}
 .btn-play-pause {
   display: none;
   position: absolute;

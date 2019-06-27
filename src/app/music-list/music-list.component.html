@@ -4,9 +4,9 @@
       <div class="information">
         {{m.name}}
       </div>
-      <div class="btn-play-pause">
-<!--        <i class="fas fa-play"></i>-->
-        <i class="fas fa-pause"></i>
+      <div (click)="onPlayPause(m)" class="btn-play-pause" [ngClass]="{'active-music': manager.musicRun===m}">
+        <i *ngIf="manager.musicRun!==m  || !manager.isPlay" class="fas fa-play"></i>
+        <i *ngIf="manager.musicRun===m && manager.isPlay"  class="fas fa-pause"></i>
       </div>
     </div>
   </div>

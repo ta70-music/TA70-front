@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Music from "../../Entities/Music";
 import {musicsFixtures} from "../../Entities/Fixtures";
+import MusicManager from "../../tools/MusicManager";
 
 @Component({
   selector: 'app-music-list',
@@ -9,11 +10,34 @@ import {musicsFixtures} from "../../Entities/Fixtures";
 })
 export class MusicListComponent implements OnInit {
   musics: Music[];
+  manager: MusicManager;
   constructor() {
     this.musics = musicsFixtures;
+    this.manager = MusicManager.get();
   }
 
   ngOnInit() {
   }
 
+  onPlay(m: Music) {
+    this.manager.setMusic(m);
+    this.manager.play();
+
+  }
+
+  onPause(m: Music) {
+    this.manager.stop();
+  }
+
+  onPlayPause(m: Music) {
+    if(this.manager.isPlay){
+      if(this.manager.musicRun===m){
+        this.onPause(m);
+      }else {
+        this.onPlay(m);
+      }
+    } else {
+      this.onPlay(m);
+    }
+  }
 }
