@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-md-auto music-container" *ngFor="let u of users" (click)="onClick(u)">
+    <div class="music mx-auto" [ngStyle]="{'background-image': 'url('+u.img+')'}">
+      <div class="information">
+        {{u.name}}
+      </div>
+    </div>
+  </div>
+</div>

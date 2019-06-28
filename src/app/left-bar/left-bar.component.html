@@ -12,3 +12,6 @@
     <div [ngClass]="{active: actualCat===c && actualmode===MainMode.MUSIC }" *ngFor="let c of categories" (click)="onChangeCat(c)" class="col-10 mx-1 clickable">{{c.name}}</div>
   </div>
 </div>
+<div class="disconnect-icon">
+  <i class="fas fa-sign-out-alt"></i>
+</div>

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-auto music-container" *ngFor="let m of musics">
-    <div class="music mx-auto">
+    <div class="music mx-auto" [ngStyle]="{'background-image': 'url('+m.img+')'}">
       <div class="information">
         {{m.name}}
       </div>

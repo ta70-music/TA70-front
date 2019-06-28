@@ -3,11 +3,13 @@
   height: 100%;
   padding-top: 10px;
   transform: translateY(100%);
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
   font-size: 18px;
   font-weight: bold;
   padding-left: 10px;
+  color: white;
+
 }
 
 .music:hover .information {
@@ -21,6 +23,8 @@
   background: #52b47b;
   overflow: hidden;
   margin-top: 15px;
+  background-size: 100% 100%;
+  background-position: center center;
 }
 .music:hover .btn-play-pause {
   display: block;
@@ -29,6 +33,7 @@
   display: block !important;
 }
 .btn-play-pause {
+  color: white;
   display: none;
   position: absolute;
   text-align: justify;

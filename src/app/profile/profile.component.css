@@ -26,6 +26,8 @@
   height: 100px;
   width: 100px;
   background-color: #52b47b;
+  background-size: 100% 100%;
+  background-position: center center;
 }
 
 .profile-name {

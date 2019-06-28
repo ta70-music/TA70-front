@@ -5,6 +5,7 @@ export default class Music {
   name: string;
   id: number;
   file: string;
+  img: string;
   author: User;
   category: Category;
 }

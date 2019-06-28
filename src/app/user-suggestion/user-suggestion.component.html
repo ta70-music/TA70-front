@@ -1,6 +1,6 @@
 <div class="row user-suggestion-container">
-  <div class="col-3" *ngFor="let u of users">
-    <div class="mx-auto profilpic">
+  <div class="col-3"  *ngFor="let u of users">
+    <div class="mx-auto profilpic" [ngStyle]="{'background-image': 'url('+u.img+')'}">
       <div class="information text-center">
         <p>{{u.name}}</p>
       </div>
