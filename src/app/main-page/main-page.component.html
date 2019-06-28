@@ -1,8 +1,10 @@
 <div class="container-fluid">
   <div class="row">
-    <app-left-bar class="col-3 navbar" (mode)="onModeChange()" (category)="onCategoryChange($event)"></app-left-bar>
-    <div class="col-9 music-list">
-      <app-music-list [musics]="musics"></app-music-list>
+    <app-left-bar class="col-3 navbar" (mode)="onModeChange($event)" (category)="onCategoryChange($event)"></app-left-bar>
+    <div class="col-9 workspace">
+      <app-music-list [musics]="musics" *ngIf="mode===MainMode.MUSIC"></app-music-list>
+      <app-user-list (user)="onUserChange($event)" *ngIf="mode===MainMode.USER && userfocus===null"></app-user-list>
+      <app-profile [user]="userfocus" *ngIf="mode===MainMode.USER && userfocus!==null"></app-profile>
     </div>
   </div>
 </div>

@@ -27,8 +27,17 @@ export class LeftBarComponent implements OnInit {
   }
 
   onChangeCat(c: Category) {
-    this.actualmode = MainMode.MUSIC;
+    if(this.actualmode!==MainMode.MUSIC){
+      this.onChangeMode(MainMode.MUSIC)
+    }
     this.actualCat = c;
     this.category.emit(c)
+  }
+
+  onChangeMode(mode: MainMode) {
+    this.actualmode = mode;
+    console.log(this.actualmode)
+    this.mode.emit(mode);
+    this.actualCat = null;
   }
 }

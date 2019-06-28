@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'home', component:HomeComponent},
   { path: '', component:HomeComponent},
-  { path: 'profile/:id', component: ProfileComponent},
   {path: 'main', component: MainPageComponent},
 ];
 

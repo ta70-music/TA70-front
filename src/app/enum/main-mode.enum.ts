@@ -1,4 +1,4 @@
 export enum MainMode {
   MUSIC,
-  USER
+  USER,
 }

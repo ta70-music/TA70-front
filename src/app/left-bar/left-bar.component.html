@@ -2,13 +2,13 @@
   <div class="row logo-container">
     <img alt="" src="../../assets/img/wavein_logo_n_white.png" class="wavein_logo_n_white mx-auto">
   </div>
-  <div class="row user-container">
+  <div class="row user-container" (click)="onChangeMode(MainMode.USER)">
     <h1>Utilisateurs</h1>
-    <div class="col-10 mx-1 clickable">Tout les utilisateurs</div>
+    <div [ngClass]="{active: actualmode===MainMode.USER }" class="col-10 mx-1 clickable">Tout les utilisateurs</div>
   </div>
   <div class="row music-container">
     <h1>Musiques</h1>
     <div (click)="onChangeCat(null)" [ngClass]="{active: actualCat===null && actualmode===MainMode.MUSIC }" class="col-10 mx-1 clickable">Tout</div>
-    <div [ngClass]="{active: actualCat===c }" *ngFor="let c of categories" (click)="onChangeCat(c)" class="col-10 mx-1 clickable">{{c.name}}</div>
+    <div [ngClass]="{active: actualCat===c && actualmode===MainMode.MUSIC }" *ngFor="let c of categories" (click)="onChangeCat(c)" class="col-10 mx-1 clickable">{{c.name}}</div>
   </div>
 </div>

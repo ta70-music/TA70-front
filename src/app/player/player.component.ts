@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import MusicManager from "../../tools/MusicManager";
 import Music from "../../Entities/Music";
 
@@ -10,12 +10,13 @@ import Music from "../../Entities/Music";
 export class PlayerComponent implements OnInit {
   manager: MusicManager;
   actualMusic: Music;
+
   constructor() {
     this.manager = MusicManager.get()
-    this.manager.addPlayCallback(()=>{
+    this.manager.addPlayCallback(() => {
       this.play()
     })
-    this.manager.addStopCallback(()=>{
+    this.manager.addStopCallback(() => {
       this.stop()
     })
     this.actualMusic = this.manager.musicRun;
@@ -24,17 +25,26 @@ export class PlayerComponent implements OnInit {
   ngOnInit() {
   }
 
+  @HostListener('document:keyup.space')
+  onSpace() {
+    if(this.manager.isPlay){
+      this.manager.stop()
+    } else {
+      this.manager.play()
+    }
+  }
+
   onPlay() {
-    console.log('toto')
+    this.manager.play()
   }
 
   onPause() {
-    console.log('totoé')
+    this.manager.stop()
   }
 
   play() {
     let audio = document.querySelector('#audiobar') as HTMLMediaElement;
-    if(this.actualMusic!==this.manager.musicRun){
+    if (this.actualMusic !== this.manager.musicRun) {
       this.actualMusic = this.manager.musicRun;
       audio.load();
     }
